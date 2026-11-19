@@ -331,7 +331,7 @@ export const doctorsData = [
     name: "Dr. S. V. Sangeetha",
     title: "Consultant Physician",
     qualifications: "MBBS, MD",
-    speciality: "General & Family Medicine",
+    speciality: "General & Internal Medicine",
     category: "General Medicine",
     photo: "/images/doctors_clean/dr_s_v_sangeetha_white.webp",
     cardImage: null,
