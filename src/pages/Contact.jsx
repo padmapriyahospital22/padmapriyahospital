@@ -46,7 +46,7 @@ export default function Contact() {
           Contact Us & Location Directions
         </h1>
         <p className="text-xs sm:text-sm text-[#69636E] mt-2 max-w-2xl leading-relaxed">
-          Conveniently located on 1st Avenue, Indira Nagar, Adyar, Chennai. Connect with our reception, administrative team, or clinical suites.
+          Conveniently located on 1st Avenue, Indira Nagar, Adyar, Chennai. Connect with our reception, administrative team, or clinical suites. 24/7 Emergency & Casualty services are open round the clock.
         </p>
       </div>
 
@@ -61,11 +61,11 @@ export default function Contact() {
             </div>
             <span className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-rose-700 bg-rose-100 px-2 py-0.5 rounded-full">
               <span className="w-1.5 h-1.5 rounded-full bg-rose-600 animate-pulse"></span>
-              24/7 Helpline
+              24/7 Casualty
             </span>
           </div>
-          <h3 className="text-xs font-bold uppercase tracking-wider text-rose-900">Enquiry & Emergency</h3>
-          <p className="text-xs text-rose-800">Casualty, Enquiries & Consultations</p>
+          <h3 className="text-xs font-bold uppercase tracking-wider text-rose-900">24/7 Emergency & Casualty Services</h3>
+          <p className="text-xs text-rose-800">Round-the-clock emergency triage, trauma & admissions</p>
           <a 
             href={`tel:${hospitalInfo.contact.emergencyNumberRaw}`} 
             onClick={() => trackCallClick('contact_emergency')}

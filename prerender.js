@@ -90,7 +90,7 @@ const pages = [
 ];
 
 // Add all approved doctors
-doctorsData.filter(d => d.rosterApproved).forEach(doc => {
+doctorsData.forEach(doc => {
   const primary = doc.speciality ? doc.speciality.split('|')[0].trim() : 'Specialist';
   pages.push({
     path: `/doctors/${doc.slug}`,
@@ -185,4 +185,4 @@ pages.forEach(page => {
   fs.writeFileSync(targetFile, html, 'utf8');
 });
 
-console.log("All 30 static prerender HTML files generated in dist/!");
+console.log();

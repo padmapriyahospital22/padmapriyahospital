@@ -141,6 +141,11 @@ export default function DoctorProfile() {
               <span className="text-[11px] font-semibold uppercase tracking-wider text-[#155943]">
                 {doctor.title}
               </span>
+              {doctor.hospitalDesignation && (
+                <span className="block text-[11px] font-bold text-[#78266F] uppercase tracking-wider mt-0.5">
+                  {doctor.hospitalDesignation}
+                </span>
+              )}
 
               <h1 className="text-2xl sm:text-3xl font-extrabold text-[#24212A] mt-0.5">
                 {doctor.name}
@@ -159,16 +164,145 @@ export default function DoctorProfile() {
               {doctor.experienceSummary}
             </p>
 
+            {/* Special Training / Professional Degrees */}
+            {doctor.qualificationsList && (
+              <div className="pt-2">
+                <h3 className="text-xs font-bold text-[#24212A] uppercase tracking-wider mb-2">
+                  Qualifications & Degrees
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#24212A]">
+                  {doctor.qualificationsList.map((qual, i) => (
+                    <div key={i} className="flex items-center gap-2 p-2 rounded-md bg-[#FAF9FB] border border-[#E5E1E7]">
+                      <Check className="w-3.5 h-3.5 text-[#155943] shrink-0" />
+                      <span>{qual}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {doctor.degreesList && (
+              <div className="pt-2">
+                <h3 className="text-xs font-bold text-[#24212A] uppercase tracking-wider mb-2">
+                  Professional Degrees & Medical Education
+                </h3>
+                <div className="space-y-1.5 text-xs text-[#24212A]">
+                  {doctor.degreesList.map((deg, i) => (
+                    <div key={i} className="flex items-start gap-2 p-2 rounded-md bg-[#FAF9FB] border border-[#E5E1E7]">
+                      <Check className="w-3.5 h-3.5 text-[#155943] shrink-0 mt-0.5" />
+                      <span>{deg}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {doctor.specialTraining && (
+              <div className="pt-2">
+                <h3 className="text-xs font-bold text-[#24212A] uppercase tracking-wider mb-2">
+                  Special Training & Advanced Certifications
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#24212A]">
+                  {doctor.specialTraining.map((st, i) => (
+                    <div key={i} className="flex items-center gap-2 p-2 rounded-md bg-[#FAF9FB] border border-[#E5E1E7]">
+                      <Check className="w-3.5 h-3.5 text-[#155943] shrink-0" />
+                      <span>{st}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {doctor.teachingExperience && (
+              <div className="pt-2">
+                <h3 className="text-xs font-bold text-[#24212A] uppercase tracking-wider mb-2">
+                  Teaching & Academic Experience
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#24212A]">
+                  {doctor.teachingExperience.map((exp, i) => (
+                    <div key={i} className="flex items-center gap-2 p-2 rounded-md bg-[#FAF9FB] border border-[#E5E1E7]">
+                      <Check className="w-3.5 h-3.5 text-[#155943] shrink-0" />
+                      <span>{exp}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {doctor.experienceDetails && (
+              <div className="pt-2">
+                <h3 className="text-xs font-bold text-[#24212A] uppercase tracking-wider mb-2">
+                  Clinical Experience & Background
+                </h3>
+                <div className="space-y-1.5 text-xs text-[#24212A]">
+                  {doctor.experienceDetails.map((det, i) => (
+                    <div key={i} className="flex items-start gap-2 p-2.5 rounded-md bg-[#FAF9FB] border border-[#E5E1E7]">
+                      <Check className="w-3.5 h-3.5 text-[#155943] shrink-0 mt-0.5" />
+                      <span>{det}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {doctor.specialInterests && (
               <div className="pt-2">
                 <h3 className="text-xs font-bold text-[#24212A] uppercase tracking-wider mb-2">
-                  Key Focus Areas & Clinical Practice
+                  Areas of Clinical Expertise
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#24212A]">
                   {doctor.specialInterests.map((interest, i) => (
                     <div key={i} className="flex items-center gap-2 p-2 rounded-md bg-[#FAF9FB] border border-[#E5E1E7]">
                       <Check className="w-3.5 h-3.5 text-[#155943] shrink-0" />
                       <span>{interest}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {doctor.academicResearch && (
+              <div className="pt-2">
+                <h3 className="text-xs font-bold text-[#24212A] uppercase tracking-wider mb-2">
+                  Academic & Research Excellence
+                </h3>
+                <div className="space-y-1.5 text-xs text-[#24212A]">
+                  {doctor.academicResearch.map((res, i) => (
+                    <div key={i} className="flex items-start gap-2 p-2 rounded-md bg-[#FAF9FB] border border-[#E5E1E7]">
+                      <Check className="w-3.5 h-3.5 text-[#155943] shrink-0 mt-0.5" />
+                      <span>{res}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {doctor.memberships && (
+              <div className="pt-2">
+                <h3 className="text-xs font-bold text-[#24212A] uppercase tracking-wider mb-2">
+                  Professional Memberships & Affiliations
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#24212A]">
+                  {doctor.memberships.map((mem, i) => (
+                    <div key={i} className="flex items-center gap-2 p-2 rounded-md bg-[#FAF9FB] border border-[#E5E1E7]">
+                      <Check className="w-3.5 h-3.5 text-[#78266F] shrink-0" />
+                      <span>{mem}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {doctor.awards && (
+              <div className="pt-2">
+                <h3 className="text-xs font-bold text-[#24212A] uppercase tracking-wider mb-2">
+                  Awards & Honours
+                </h3>
+                <div className="space-y-1.5 text-xs text-[#24212A]">
+                  {doctor.awards.map((aw, i) => (
+                    <div key={i} className="flex items-center gap-2 p-2.5 rounded-md bg-amber-50 border border-amber-200 text-amber-900 font-semibold">
+                      <Check className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                      <span>{aw}</span>
                     </div>
                   ))}
                 </div>

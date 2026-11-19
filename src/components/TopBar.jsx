@@ -10,10 +10,10 @@ export default function TopBar() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-2">
         {/* Contact numbers */}
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-          {/* Emergency & Enquiry Helpline 24/7 */}
+          {/* 24/7 Emergency & Casualty Services */}
           <div className="flex items-center gap-1.5 bg-rose-950/70 text-rose-200 px-2.5 py-0.5 rounded-full border border-rose-500/40">
             <span className="w-2 h-2 rounded-full bg-rose-400 animate-pulse"></span>
-            <span className="text-[11px] font-bold uppercase tracking-wider text-rose-300">Emergency & Enquiry:</span>
+            <span className="text-[11px] font-bold uppercase tracking-wider text-rose-300">24/7 Emergency & Casualty:</span>
             <a 
               href={`tel:${hospitalInfo.contact.emergencyNumberRaw}`} 
               onClick={() => trackCallClick('topbar_emergency')}

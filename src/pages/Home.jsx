@@ -105,7 +105,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. TRUST AND HOSPITAL INFORMATION BAR */}
+      {/* 2. 24/7 EMERGENCY & CASUALTY SERVICES PROMINENT BANNER */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-gradient-to-r from-rose-900 via-rose-800 to-rose-950 text-white rounded-lg p-5 sm:p-6 shadow-sm border border-rose-700/50 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-rose-400 animate-pulse"></span>
+              <span className="text-xs font-bold uppercase tracking-wider text-rose-200">
+                24/7 Emergency & Casualty Services
+              </span>
+            </div>
+            <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight">
+              Round-the-Clock Emergency Care & Casualty Support
+            </h2>
+            <p className="text-xs sm:text-sm text-rose-100/90 max-w-2xl leading-relaxed">
+              Immediate triage, acute trauma care, surgical emergency coverage, and critical care monitoring under specialist supervision at 1st Avenue, Indira Nagar, Adyar.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
+            <a
+              href={`tel:${hospitalInfo.contact.emergencyNumberRaw}`}
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md bg-white hover:bg-rose-50 text-rose-900 font-bold text-xs sm:text-sm transition-colors shadow-xs"
+            >
+              <span>Call 24/7 Helpline: {hospitalInfo.contact.emergencyContact}</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. TRUST AND HOSPITAL INFORMATION BAR */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-[#FAF9FB] rounded-md border border-[#E5E1E7] p-5 sm:p-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -188,21 +216,21 @@ export default function Home() {
             {/* Left Content */}
             <div className="lg:col-span-6 space-y-4">
               <span className="text-[11px] font-bold uppercase tracking-wider text-[#78266F]">
-                ABOUT SRI PADMAPRIYA HOSPITAL
+                WELCOME TO PADMAPRIYA HOSPITAL, ADYAR
               </span>
               
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#24212A] leading-tight">
-                Dedicated Community Healthcare in Adyar Since 2001
+                A Legacy of Care, A New Era of Excellence
               </h2>
 
               <p className="text-xs sm:text-sm text-[#69636E] leading-relaxed">
-                Sri Padmapriya Hospital Pvt. Ltd. is a modern multi-speciality medical facility located in Indira Nagar, Adyar. Equipped with private consultant suites, an on-site dispensary (G K Medicals), pathology diagnostics, ultrasound imaging, and complete inpatient recovery wards.
+                For over 25 years, Padmapriya Hospital has been a trusted name in healthcare, located in the prime heart of Adyar, Chennai at 1st Avenue, Indira Nagar. Now, under new management led by <strong className="text-[#24212A]">Dr. Kanmani Ganesh</strong> (Senior Gynaecologist) and <strong className="text-[#24212A]">Dr. Gokulakrishnan</strong> (Critical Care Consultant), we have renewed our commitment to providing comprehensive, affordable, and advanced medical care.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs text-[#24212A]">
                 <div className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-[#155943] shrink-0" />
-                  <span>24/7 Inpatient & Reception Desk</span>
+                  <span>24/7 Outpatient & Reception Desk</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-[#155943] shrink-0" />

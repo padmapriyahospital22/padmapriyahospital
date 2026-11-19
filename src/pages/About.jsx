@@ -40,14 +40,88 @@ export default function About() {
       {/* Header */}
       <div className="border-b border-[#E5E1E7] pb-6">
         <span className="text-[11px] font-bold uppercase tracking-wider text-[#78266F]">
-          HOSPITAL BACKGROUND
+          WELCOME TO PADMAPRIYA HOSPITAL, ADYAR
         </span>
         <h1 className="text-2xl sm:text-3xl font-extrabold text-[#24212A] mt-1">
-          About Sri Padmapriya Hospital Pvt. Ltd.
+          A Legacy of Care, A New Era of Excellence
         </h1>
-        <p className="text-xs sm:text-sm text-[#69636E] mt-2 max-w-2xl leading-relaxed">
-          Established in 2001 in Indira Nagar, Adyar, Chennai, Sri Padmapriya Hospital provides dedicated outpatient specialist consultations, diagnostic infrastructure, and inpatient medical care.
+        <p className="text-xs sm:text-sm text-[#69636E] mt-2 max-w-3xl leading-relaxed">
+          For over 25 years, Padmapriya Hospital has been a trusted name in healthcare, located in the prime heart of Adyar, Chennai. Situated at 1st Avenue, Indira Nagar, we have been serving generations of families with compassion and clinical excellence.
         </p>
+      </div>
+
+      {/* Hospital History & New Management */}
+      <div className="bg-[#FAF9FB] rounded-md border border-[#E5E1E7] p-6 sm:p-8 space-y-4">
+        <span className="text-xs font-bold uppercase tracking-wider text-[#155943]">
+          Hospital History & New Commitment
+        </span>
+        <h2 className="text-xl font-bold text-[#24212A]">
+          Over 25 Years of Dedicated Community Service
+        </h2>
+        <p className="text-xs sm:text-sm text-[#69636E] leading-relaxed">
+          Situated at 1st Avenue, Indira Nagar, Adyar, Chennai, Sri Padmapriya Hospital has been a healthcare pillar for more than two and a half decades. Now, under new management, we have renewed our commitment to providing comprehensive, affordable, and advanced medical care.
+        </p>
+        <p className="text-xs sm:text-sm text-[#69636E] leading-relaxed">
+          The hospital is led by <strong className="text-[#24212A]">Dr. Kanmani Ganesh</strong>, Senior Gynaecologist and <strong className="text-[#24212A]">Dr. Gokulakrishnan</strong>, Critical Care Consultant, bringing together expertise in women's health and critical care to serve our community better.
+        </p>
+      </div>
+
+      {/* Leadership Row */}
+      <div>
+        <h2 className="text-lg font-bold text-[#24212A] mb-4">
+          Hospital Leadership
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-white p-6 rounded-md border border-[#E5E1E7] space-y-2">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#78266F]">
+              Clinical Leadership — Women's Health
+            </span>
+            <h3 className="text-base font-bold text-[#24212A]">
+              Dr. Kanmani Ganesh
+            </h3>
+            <p className="text-xs font-semibold text-[#155943]">
+              Senior Gynaecologist & Chief Consultant
+            </p>
+            <p className="text-xs text-[#69636E] leading-relaxed pt-1">
+              Guiding comprehensive obstetrics, fertility care, advanced laparoscopic surgeries, and high-risk pregnancy management with over 24 years of teaching and surgical expertise.
+            </p>
+          </div>
+
+          <div className="bg-white p-6 rounded-md border border-[#E5E1E7] space-y-2">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#155943]">
+              Critical Care & Emergency Leadership
+            </span>
+            <h3 className="text-base font-bold text-[#24212A]">
+              Dr. Gokulakrishnan
+            </h3>
+            <p className="text-xs font-semibold text-[#78266F]">
+              Critical Care Consultant
+            </p>
+            <p className="text-xs text-[#69636E] leading-relaxed pt-1">
+              Overseeing 24/7 ICU supervision, round-the-clock emergency casualty stabilization, and multidisciplinary critical care monitoring for medical and surgical inpatients.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 24/7 Emergency & Casualty Banner */}
+      <div className="bg-rose-50 border border-rose-200 rounded-md p-6 space-y-3">
+        <div className="flex items-center gap-2">
+          <span className="w-2.5 h-2.5 rounded-full bg-rose-600 animate-pulse"></span>
+          <span className="text-xs font-bold uppercase tracking-wider text-rose-800">
+            24/7 Emergency & Casualty Services
+          </span>
+        </div>
+        <h3 className="text-lg font-bold text-rose-950">
+          Round-the-Clock Emergency Care & Casualty Support
+        </h3>
+        <p className="text-xs sm:text-sm text-rose-900 leading-relaxed max-w-3xl">
+          At Sri Padmapriya Hospital, our 24/7 Emergency & Casualty Services provide immediate triage, trauma response, emergency surgical care, and intensive care backup whenever you need it.
+        </p>
+        <div className="pt-1 flex flex-wrap items-center gap-4 text-xs font-bold">
+          <span className="text-rose-950">24/7 Helpline: {hospitalInfo.contact.emergencyContact}</span>
+          <span className="text-rose-800">Landlines: 044-24420091 / 044-24450878</span>
+        </div>
       </div>
 
       {/* Vision & Mission Row */}
