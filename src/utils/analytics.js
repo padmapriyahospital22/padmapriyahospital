@@ -13,17 +13,33 @@ export const GA_MEASUREMENT_ID = 'G-HCCT6R638G';
 
 /**
  * Tracks SPA route changes on client-side React Router navigation.
- * Only path and title are transmitted; query parameters are stripped if sensitive.
+ * 
+ * Strict Privacy Requirement for Doctor Profiles:
+ * The actual doctor profile URLs and SEO metadata remain fully intact for visitors and crawlers.
+ * However, GA4 receives generic analytics-only values:
+ * - page_path: '/doctors/profile'
+ * - page_title: 'Doctor Profile | Sri Padmapriya Hospital'
+ * - page_location: 'https://www.padmapriyahospital.com/doctors/profile'
  */
 export const trackPageView = (path, title) => {
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-    // Sanitize path to ensure no query strings leak accidentally
-    const cleanPath = path ? path.split('?')[0] : window.location.pathname;
-    
+    const rawPath = path ? path.split('?')[0] : window.location.pathname;
+
+    let pagePath = rawPath;
+    let pageTitle = title || document.title;
+    let pageLocation = `${window.location.origin}${rawPath}`;
+
+    // If navigating to an individual doctor profile (/doctors/dr-...), sanitize for GA4
+    if (rawPath.startsWith('/doctors/') && rawPath !== '/doctors' && rawPath !== '/doctors/') {
+      pagePath = '/doctors/profile';
+      pageTitle = 'Doctor Profile | Sri Padmapriya Hospital';
+      pageLocation = 'https://www.padmapriyahospital.com/doctors/profile';
+    }
+
     window.gtag('event', 'page_view', {
-      page_path: cleanPath,
-      page_location: `${window.location.origin}${cleanPath}`,
-      page_title: title || document.title
+      page_path: pagePath,
+      page_location: pageLocation,
+      page_title: pageTitle
     });
   } else if (process.env.NODE_ENV === 'development') {
     console.log(`[GA4 Page View] ${path} - ${title || document.title}`);

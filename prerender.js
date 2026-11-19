@@ -97,7 +97,8 @@ doctorsData.filter(d => d.rosterApproved).forEach(doc => {
     title: `${doc.name} – ${primary} in Adyar, Chennai | Sri Padmapriya Hospital`,
     desc: `Consult ${doc.name}, ${primary} at Sri Padmapriya Hospital, Adyar, Chennai. View qualifications, consultation timings (${doc.schedule}) and appointment information.`,
     h1: doc.name,
-    bodyText: `${doc.name} (${doc.qualifications}) is a ${doc.title} specializing in ${doc.speciality} at Sri Padmapriya Hospital, Adyar, Chennai. Consultation timings: ${doc.schedule}. Consultation fee: ${doc.opdFee || 'Available upon inquiry'}.`
+    bodyText: `${doc.name} (${doc.qualifications}) is a ${doc.title} specializing in ${doc.speciality} at Sri Padmapriya Hospital, Adyar, Chennai. Consultation timings: ${doc.schedule}. Consultation fee: ${doc.opdFee || 'Available upon inquiry'}.`,
+    isDoctorProfile: true
   });
 });
 
@@ -107,6 +108,18 @@ pages.forEach(page => {
   const canonicalUrl = `https://www.padmapriyahospital.com${page.path === '/' ? '/' : page.path}`;
   
   let html = baseHtml;
+
+  // Privacy hardening for initial HTML GA4 config on doctor profiles
+  if (page.isDoctorProfile) {
+    html = html.replace(
+      /gtag\('config',\s*'G-HCCT6R638G',\s*\{[\s\S]*?\}\);/,
+      `gtag('config', 'G-HCCT6R638G', {
+        page_path: '/doctors/profile',
+        page_title: 'Doctor Profile | Sri Padmapriya Hospital',
+        page_location: 'https://www.padmapriyahospital.com/doctors/profile'
+      });`
+    );
+  }
   
   // Replace Title
   html = html.replace(/<title>.*?<\/title>/, `<title>${page.title}</title>`);
