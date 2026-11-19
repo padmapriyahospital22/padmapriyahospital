@@ -134,7 +134,7 @@ export const doctorCategories = [
 export const doctorsData = [
   {id: "dr-k-kanmani-ganesh",
     slug: "dr-k-kanmani-ganesh",
-    name: "Dr. K. Kanmani",
+    name: "Dr. Kanmani Ganesh",
     title: "Senior Gynaecologist | Fertility Specialist | Laparoscopic Surgeon",
     hospitalDesignation: "Chief Consultant – Sri PadmaPriya Hospital, Adyar",
     qualifications: "M.D. (Obstetrics & Gynaecology), DGO",
