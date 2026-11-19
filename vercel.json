@@ -1,7 +1,13 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/(about|doctors|specialities|facilities|patient-info|appointment|contact|privacy|terms)",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/doctors/:slug(dr-k-kanmani-ganesh|dr-pavithran|dr-shanmuga-prakash-r|dr-sai-prashanth-pr|dr-m-sivagamasundari|dr-g-rangarajan|dr-s-selva-sankar|dr-hameedullah|dr-s-v-sangeetha|dr-vijayanarasimma-reddy|dr-k-gowthame|prof-dr-g-venkatesan|dr-r-selvaraj|dr-elan-cheralathan|dr-jacinth-chelliah-cornelius|dr-g-gokulakrishnan|dr-udhayadasan-k|dr-sujay-susikar|dr-e-thiyagarajan|dr-ishwarya-muralidharan)",
       "destination": "/index.html"
     }
   ],

@@ -15,7 +15,7 @@ export default function Contact() {
           "@context": "https://schema.org",
           "@type": "ContactPage",
           "name": "Contact Sri Padmapriya Hospital",
-          "url": "https://padmapriyahospital.com/contact",
+          "url": "https://www.padmapriyahospital.com/contact",
           "breadcrumb": {
             "@type": "BreadcrumbList",
             "itemListElement": [
@@ -23,13 +23,13 @@ export default function Contact() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://padmapriyahospital.com/"
+                "item": "https://www.padmapriyahospital.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Contact",
-                "item": "https://padmapriyahospital.com/contact"
+                "item": "https://www.padmapriyahospital.com/contact"
               }
             ]
           }

@@ -29,19 +29,19 @@ export default function DoctorProfile() {
     "@graph": [
       {
         "@type": "Physician",
-        "@id": `https://padmapriyahospital.com/doctors/${doctor.slug}#physician`,
+        "@id": `https://www.padmapriyahospital.com/doctors/${doctor.slug}#physician`,
         "name": doctor.name,
         "jobTitle": doctor.title,
         "description": doctor.experienceSummary || `Consult ${doctor.name}, ${primarySpecialty} at Sri Padmapriya Hospital, Adyar, Chennai.`,
-        "url": `https://padmapriyahospital.com/doctors/${doctor.slug}`,
-        "image": doctor.photo ? `https://padmapriyahospital.com${doctor.photo}` : "https://padmapriyahospital.com/images/brand/official_hospital_logo.png",
+        "url": `https://www.padmapriyahospital.com/doctors/${doctor.slug}`,
+        "image": doctor.photo ? `https://www.padmapriyahospital.com${doctor.photo}` : "https://www.padmapriyahospital.com/images/brand/official_hospital_logo.png",
         "medicalSpecialty": primarySpecialty,
         "medicalSpecialtyDescription": doctor.speciality,
         ...(doctor.qualifications && { "alumniOf": doctor.qualifications }),
         ...(doctor.isRegistrationVerified && doctor.registrationNumber ? { "identifier": doctor.registrationNumber } : {}),
         "worksFor": {
           "@type": "Hospital",
-          "@id": "https://padmapriyahospital.com/#hospital",
+          "@id": "https://www.padmapriyahospital.com/#hospital",
           "name": "Sri Padmapriya Hospital Pvt. Ltd.",
           "address": {
             "@type": "PostalAddress",
@@ -61,19 +61,19 @@ export default function DoctorProfile() {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://padmapriyahospital.com/"
+            "item": "https://www.padmapriyahospital.com/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Doctors",
-            "item": "https://padmapriyahospital.com/doctors"
+            "item": "https://www.padmapriyahospital.com/doctors"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": doctor.name,
-            "item": `https://padmapriyahospital.com/doctors/${doctor.slug}`
+            "item": `https://www.padmapriyahospital.com/doctors/${doctor.slug}`
           }
         ]
       }

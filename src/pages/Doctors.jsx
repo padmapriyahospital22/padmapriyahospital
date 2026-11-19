@@ -55,7 +55,7 @@ export default function Doctors() {
           "@type": "MedicalWebPage",
           "name": "Specialist Doctors & Medical Team | Sri Padmapriya Hospital",
           "description": "Meet our panel of 20 verified medical and surgical specialists practicing at Sri Padmapriya Hospital, Adyar, Chennai.",
-          "url": "https://padmapriyahospital.com/doctors",
+          "url": "https://www.padmapriyahospital.com/doctors",
           "breadcrumb": {
             "@type": "BreadcrumbList",
             "itemListElement": [
@@ -63,13 +63,13 @@ export default function Doctors() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://padmapriyahospital.com/"
+                "item": "https://www.padmapriyahospital.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Doctors",
-                "item": "https://padmapriyahospital.com/doctors"
+                "item": "https://www.padmapriyahospital.com/doctors"
               }
             ]
           }

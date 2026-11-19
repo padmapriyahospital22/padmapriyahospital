@@ -40,11 +40,18 @@ export default function Home() {
 
         {/* Mobile-Only Purple Doctor Illustration: Zoomed slightly out, centered, and borderless */}
         <div className="absolute inset-0 z-0 pointer-events-none flex items-center justify-center overflow-hidden sm:hidden">
-          <img
-            src="/images/hospital/doctor_illustration_purple_noborder.png"
-            alt=""
-            className="w-[105%] max-w-none h-auto object-contain opacity-28 scale-105 filter contrast-110"
-          />
+          <picture>
+            <source srcSet="/images/hospital/doctor_illustration_purple_noborder.webp" type="image/webp" />
+            <img
+              src="/images/hospital/doctor_illustration_purple_noborder.png"
+              alt=""
+              width={585}
+              height={1024}
+              fetchPriority="high"
+              loading="eager"
+              className="w-[105%] max-w-none h-auto object-contain opacity-28 scale-105 filter contrast-110"
+            />
+          </picture>
           {/* Radial soft fade to ensure all text, headlines, and buttons pop with crystal clear contrast */}
           <div className="absolute inset-0 bg-radial from-transparent via-white/35 to-white/90" />
         </div>

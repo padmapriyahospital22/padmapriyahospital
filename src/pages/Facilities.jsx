@@ -16,7 +16,7 @@ export default function Facilities() {
           "@type": "MedicalWebPage",
           "name": "Hospital Facilities & Diagnostic Infrastructure | Sri Padmapriya Hospital",
           "description": "Operation Theatres, ICU, Ultrasound, Digital X-Ray, Pathology Lab, and Inpatient Rooms in Adyar, Chennai.",
-          "url": "https://padmapriyahospital.com/facilities",
+          "url": "https://www.padmapriyahospital.com/facilities",
           "breadcrumb": {
             "@type": "BreadcrumbList",
             "itemListElement": [
@@ -24,13 +24,13 @@ export default function Facilities() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://padmapriyahospital.com/"
+                "item": "https://www.padmapriyahospital.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Facilities",
-                "item": "https://padmapriyahospital.com/facilities"
+                "item": "https://www.padmapriyahospital.com/facilities"
               }
             ]
           }

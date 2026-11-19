@@ -17,7 +17,7 @@ export default function Specialities() {
           "@type": "MedicalWebPage",
           "name": "Clinical Specialties & Departments | Sri Padmapriya Hospital",
           "description": "Comprehensive healthcare departments in Adyar, Chennai supported by qualified consultant surgeons.",
-          "url": "https://padmapriyahospital.com/specialities",
+          "url": "https://www.padmapriyahospital.com/specialities",
           "breadcrumb": {
             "@type": "BreadcrumbList",
             "itemListElement": [
@@ -25,13 +25,13 @@ export default function Specialities() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://padmapriyahospital.com/"
+                "item": "https://www.padmapriyahospital.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Specialities",
-                "item": "https://padmapriyahospital.com/specialities"
+                "item": "https://www.padmapriyahospital.com/specialities"
               }
             ]
           }

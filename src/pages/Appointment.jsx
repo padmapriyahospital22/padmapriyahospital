@@ -19,7 +19,7 @@ export default function Appointment() {
           "@context": "https://schema.org",
           "@type": "WebPage",
           "name": "Book Doctor Appointment Online | Sri Padmapriya Hospital",
-          "url": "https://padmapriyahospital.com/appointment",
+          "url": "https://www.padmapriyahospital.com/appointment",
           "breadcrumb": {
             "@type": "BreadcrumbList",
             "itemListElement": [
@@ -27,13 +27,13 @@ export default function Appointment() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://padmapriyahospital.com/"
+                "item": "https://www.padmapriyahospital.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Book Appointment",
-                "item": "https://padmapriyahospital.com/appointment"
+                "item": "https://www.padmapriyahospital.com/appointment"
               }
             ]
           }

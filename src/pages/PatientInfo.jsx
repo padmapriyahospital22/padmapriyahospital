@@ -15,7 +15,7 @@ export default function PatientInfo() {
           "@context": "https://schema.org",
           "@type": "MedicalWebPage",
           "name": "Patient Care Guidelines & Visitor Information | Sri Padmapriya Hospital",
-          "url": "https://padmapriyahospital.com/patient-info",
+          "url": "https://www.padmapriyahospital.com/patient-info",
           "breadcrumb": {
             "@type": "BreadcrumbList",
             "itemListElement": [
@@ -23,13 +23,13 @@ export default function PatientInfo() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://padmapriyahospital.com/"
+                "item": "https://www.padmapriyahospital.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Patient Info",
-                "item": "https://padmapriyahospital.com/patient-info"
+                "item": "https://www.padmapriyahospital.com/patient-info"
               }
             ]
           }

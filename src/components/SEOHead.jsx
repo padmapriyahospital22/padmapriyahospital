@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const BASE_URL = 'https://padmapriyahospital.com';
+const BASE_URL = 'https://www.padmapriyahospital.com';
 
 /**
  * Reusable SEO Head component providing dynamic per-page metadata,

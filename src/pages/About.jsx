@@ -16,7 +16,7 @@ export default function About() {
           "@type": "AboutPage",
           "name": "About Sri Padmapriya Hospital Pvt. Ltd.",
           "description": "Established in 2001 in Indira Nagar, Adyar, Chennai, providing multispeciality clinical care.",
-          "url": "https://padmapriyahospital.com/about",
+          "url": "https://www.padmapriyahospital.com/about",
           "breadcrumb": {
             "@type": "BreadcrumbList",
             "itemListElement": [
@@ -24,13 +24,13 @@ export default function About() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://padmapriyahospital.com/"
+                "item": "https://www.padmapriyahospital.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "About Us",
-                "item": "https://padmapriyahospital.com/about"
+                "item": "https://www.padmapriyahospital.com/about"
               }
             ]
           }
