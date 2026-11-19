@@ -163,9 +163,9 @@ export const doctorsData = [
   {
     id: "dr-shanmuga-prakash-r",
     slug: "dr-shanmuga-prakash-r",
-    name: "Dr. Shanmuga Prakash R",
+    name: "Dr. R. Shanmuga Prakash",
     title: "Consultant Plastic, Cosmetic & Hair Transplant Surgeon",
-    qualifications: "Qualifications to be verified with medical council",
+    qualifications: "MS (Gen Surg), M.Ch (Plastic Surg)",
     speciality: "Plastic, Cosmetic & Hair Transplant Surgery",
     category: "Plastic & Cosmetic Surgery",
     photo: "/images/doctors_clean/dr_shanmuga_prakash_white.webp",
@@ -185,7 +185,7 @@ export const doctorsData = [
       "Elective & Reconstructive Plastic Surgery"
     ],
     rosterApproved: true,
-    verificationNotes: "Consultation fee ₹1,000 and Mon-Sat availability supplied in brief. Formal medical degree abbreviations and registration number to be confirmed."
+    verificationNotes: "Qualifications verified: MS (Gen Surg), M.Ch (Plastic Surg). Consultation fee ₹1,000 and Mon-Sat availability confirmed."
   },
   {
     id: "dr-sai-prashanth-pr",

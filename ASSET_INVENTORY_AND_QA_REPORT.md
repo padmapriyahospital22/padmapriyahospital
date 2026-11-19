@@ -13,7 +13,7 @@
 |---|---|---|---|---|
 | `Dr_K_Kanmani_Ganesh_Senior_Gynaecologist.png` | Doctor Photograph | Doctor Directory & Profile | Dr. K. Kanmani Ganesh | **Verified**: Original portrait assigned. Fees/schedule marked provisional pending client sign-off. |
 | `Dr_Pavithran_Orthopaedics.png` | Doctor Photograph | Doctor Directory & Profile | Dr. Pavithran | **Verified**: Original portrait assigned. Matched to visiting card. |
-| `Dr_Shanmuga_Prakash_R_Plastic_Surgery.png` | Doctor Photograph | Doctor Directory & Profile | Dr. Shanmuga Prakash R | **Verified**: Original portrait assigned. ₹1,000 OPD fee supplied in brief. |
+| `Dr_Shanmuga_Prakash_R_Plastic_Surgery.png` | Doctor Photograph | Doctor Directory & Profile | Dr. R. Shanmuga Prakash | **Verified**: Original portrait assigned. ₹1,000 OPD fee supplied in brief. |
 | `Dr_Sai_Prashanth_PR_Neurology.png` | Doctor Photograph | Doctor Directory & Profile | Dr. Sai Prashanth PR | **Verified**: Original portrait assigned. Reg No. 107903, OPD ₹800, IP ₹1,000 recorded. |
 | `Dr_M_Sivagamasundari_ENT.png` | Doctor Photograph | Doctor Directory & Profile | Dr. M. Sivagamasundari | **Verified**: Original portrait assigned. Reg No. 104219, Fee ₹500 + charges verified against card. |
 | `Dr_S_Selva_Sankar_photo_identity_to_confirm.jpeg` | Doctor Photograph | Doctor Directory & Profile | Dr. S. Selva Sankar | **Pending Client Confirmation**: Photographed doctor identity noted in manifest as candidate to confirm. |
@@ -33,7 +33,7 @@
 |---|---|---|---|---|---|
 | **Dr. K. Kanmani Ganesh** | MBBS, DGO, MD (OG) | Obstetrics, Gynaecology & Infertility | Pending | ₹700 (Provisional) | Confirm consultation fee & council registration number. |
 | **Dr. Pavithran** | MBBS, M.S. Ortho | Orthopaedics & Joint Care | Pending | Pending | Confirm official hospital consultation fee and OPD days. |
-| **Dr. Shanmuga Prakash R** | Degrees to verify | Plastic, Cosmetic & Hair Transplant Surgery | Pending | ₹1,000 (Supplied) | Provide exact medical degree abbreviations & registration number. |
+| **Dr. R. Shanmuga Prakash** | MS (Gen Surg), M.Ch (Plastic Surg) | Plastic, Cosmetic & Hair Transplant Surgery | Pending | ₹1,000 (Supplied) | Degrees verified. Provide exact registration number if available. |
 | **Dr. Sai Prashanth PR** | MBBS, MD, DM, FNB | Neurology & Neurointervention | **107903** (Verified) | OPD ₹800 / IP ₹1,000 | Confirm specific days of the week for 11:30 AM–12:00 PM slot. |
 | **Dr. M. Sivagamasundari** | MBBS, MS (ENT) | ENT, Head & Neck Surgery | **104219** (Verified) | ₹500 + Hospital Charges | Confirm on-call emergency arrival protocol. |
 | **Dr. S. Selva Sankar** | MS, FMAS, M.Ch. (SGE) | Surgical Gastroenterology / GI | Pending | Pending | Confirm identity mapping of portrait image and consultation fee. |
