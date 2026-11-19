@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingAppointmentButton from './components/FloatingAppointmentButton';
+import { initGA, trackPageView } from './utils/analytics';
 
 // Pages
 import Home from './pages/Home';
@@ -18,20 +19,29 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfUse from './pages/TermsOfUse';
 import NotFound from './pages/NotFound';
 
-function ScrollToTop() {
-  const { pathname } = useLocation();
+function RouteTracker() {
+  const { pathname, search } = useLocation();
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-  }, [pathname]);
+    // Small timeout ensures document.title has updated via react-helmet-async
+    const timer = setTimeout(() => {
+      trackPageView(`${pathname}${search}`, document.title);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [pathname, search]);
 
   return null;
 }
 
 export default function App() {
+  useEffect(() => {
+    initGA();
+  }, []);
+
   return (
     <Router>
-      <ScrollToTop />
+      <RouteTracker />
       <div className="relative min-h-screen flex flex-col bg-white text-[#24212A] font-sans selection:bg-[#78266F]/15 selection:text-[#78266F]">
         {/* Subtle, non-intrusive Purple Caduceus Medical Watermark in background */}
         <div 
