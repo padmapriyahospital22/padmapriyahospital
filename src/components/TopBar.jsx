@@ -2,6 +2,7 @@ import React from 'react';
 import { Phone, MapPin, Clock, AlertCircle } from 'lucide-react';
 import { InstagramIcon } from './Icons';
 import { hospitalInfo } from '../data/hospitalData';
+import { trackCallClick, trackDirectionsClick } from '../utils/analytics';
 
 export default function TopBar() {
   return (
@@ -13,7 +14,11 @@ export default function TopBar() {
           <div className="flex items-center gap-1.5 bg-rose-950/70 text-rose-200 px-2.5 py-0.5 rounded-full border border-rose-500/40">
             <span className="w-2 h-2 rounded-full bg-rose-400 animate-pulse"></span>
             <span className="text-[11px] font-bold uppercase tracking-wider text-rose-300">Emergency & Enquiry:</span>
-            <a href={`tel:${hospitalInfo.contact.emergencyNumberRaw}`} className="font-bold text-white hover:text-rose-200 transition-colors">
+            <a 
+              href={`tel:${hospitalInfo.contact.emergencyNumberRaw}`} 
+              onClick={() => trackCallClick(hospitalInfo.contact.emergencyNumberRaw, 'topbar_emergency')}
+              className="font-bold text-white hover:text-rose-200 transition-colors"
+            >
               {hospitalInfo.contact.emergencyContact}
             </a>
           </div>
@@ -21,11 +26,19 @@ export default function TopBar() {
           <div className="flex items-center gap-1.5 text-purple-100">
             <Phone className="w-3.5 h-3.5 text-emerald-300 shrink-0" />
             <span className="text-xs text-purple-200">Landlines:</span>
-            <a href={`tel:${hospitalInfo.contact.primaryLandline.replace(/[^0-9]/g, '')}`} className="font-semibold hover:text-white transition-colors">
+            <a 
+              href={`tel:${hospitalInfo.contact.primaryLandline.replace(/[^0-9]/g, '')}`} 
+              onClick={() => trackCallClick(hospitalInfo.contact.primaryLandline, 'topbar_primary')}
+              className="font-semibold hover:text-white transition-colors"
+            >
               {hospitalInfo.contact.primaryLandline}
             </a>
             <span className="text-purple-400">/</span>
-            <a href={`tel:${hospitalInfo.contact.secondaryLandline.replace(/[^0-9]/g, '')}`} className="font-semibold hover:text-white transition-colors">
+            <a 
+              href={`tel:${hospitalInfo.contact.secondaryLandline.replace(/[^0-9]/g, '')}`} 
+              onClick={() => trackCallClick(hospitalInfo.contact.secondaryLandline, 'topbar_secondary')}
+              className="font-semibold hover:text-white transition-colors"
+            >
               {hospitalInfo.contact.secondaryLandline}
             </a>
           </div>
@@ -42,6 +55,7 @@ export default function TopBar() {
             href={hospitalInfo.address.googleMapsUrl} 
             target="_blank" 
             rel="noopener noreferrer" 
+            onClick={() => trackDirectionsClick()}
             className="flex items-center gap-1 text-purple-200 hover:text-white transition-colors"
           >
             <MapPin className="w-3.5 h-3.5 text-emerald-300 shrink-0" />

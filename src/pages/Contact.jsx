@@ -3,6 +3,7 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { InstagramIcon } from '../components/Icons';
 import { hospitalInfo } from '../data/hospitalData';
 import SEOHead from '../components/SEOHead';
+import { trackCallClick, trackDirectionsClick } from '../utils/analytics';
 
 export default function Contact() {
   return (
@@ -65,7 +66,11 @@ export default function Contact() {
           </div>
           <h3 className="text-xs font-bold uppercase tracking-wider text-rose-900">Enquiry & Emergency</h3>
           <p className="text-xs text-rose-800">Casualty, Enquiries & Consultations</p>
-          <a href={`tel:${hospitalInfo.contact.emergencyNumberRaw}`} className="block text-sm font-bold text-rose-700 font-mono hover:underline">
+          <a 
+            href={`tel:${hospitalInfo.contact.emergencyNumberRaw}`} 
+            onClick={() => trackCallClick(hospitalInfo.contact.emergencyNumberRaw, 'contact_emergency')}
+            className="block text-sm font-bold text-rose-700 font-mono hover:underline"
+          >
             {hospitalInfo.contact.emergencyContact}
           </a>
         </div>
@@ -77,7 +82,11 @@ export default function Contact() {
           </div>
           <h3 className="text-xs font-bold uppercase tracking-wider text-[#24212A]">Hospital Landline 1</h3>
           <p className="text-xs text-[#69636E]">Reception desk & appointments</p>
-          <a href={`tel:${hospitalInfo.contact.primaryLandline.replace(/[^0-9]/g, '')}`} className="block text-sm font-bold text-[#78266F] font-mono hover:underline">
+          <a 
+            href={`tel:${hospitalInfo.contact.primaryLandline.replace(/[^0-9]/g, '')}`} 
+            onClick={() => trackCallClick(hospitalInfo.contact.primaryLandline, 'contact_primary')}
+            className="block text-sm font-bold text-[#78266F] font-mono hover:underline"
+          >
             {hospitalInfo.contact.primaryLandline}
           </a>
         </div>
@@ -89,7 +98,11 @@ export default function Contact() {
           </div>
           <h3 className="text-xs font-bold uppercase tracking-wider text-[#24212A]">Hospital Landline 2</h3>
           <p className="text-xs text-[#69636E]">Direct line & enquiries</p>
-          <a href={`tel:${hospitalInfo.contact.secondaryLandline.replace(/[^0-9]/g, '')}`} className="block text-sm font-bold text-[#155943] font-mono hover:underline">
+          <a 
+            href={`tel:${hospitalInfo.contact.secondaryLandline.replace(/[^0-9]/g, '')}`} 
+            onClick={() => trackCallClick(hospitalInfo.contact.secondaryLandline, 'contact_secondary')}
+            className="block text-sm font-bold text-[#155943] font-mono hover:underline"
+          >
             {hospitalInfo.contact.secondaryLandline}
           </a>
         </div>
@@ -155,6 +168,7 @@ export default function Contact() {
                 href={hospitalInfo.address.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackDirectionsClick()}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[#155943] hover:bg-[#0e4030] text-white text-xs font-semibold transition-colors"
               >
                 <MapPin className="w-3.5 h-3.5" />
