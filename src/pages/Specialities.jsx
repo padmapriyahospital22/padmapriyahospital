@@ -12,6 +12,30 @@ export default function Specialities() {
         title="Medical Specialties & Clinical Departments in Adyar | Padmapriya Hospital"
         description="Comprehensive healthcare specialties in Adyar, Chennai: Obstetrics & Gynaecology, General & Laparoscopic Surgery, Orthopaedics, Neurology, ENT, Dermatology, and Pulmonology."
         canonicalPath="/specialities"
+        schemaJson={{
+          "@context": "https://schema.org",
+          "@type": "MedicalWebPage",
+          "name": "Clinical Specialties & Departments | Sri Padmapriya Hospital",
+          "description": "Comprehensive healthcare departments in Adyar, Chennai supported by qualified consultant surgeons.",
+          "url": "https://padmapriyahospital.com/specialities",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://padmapriyahospital.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Specialities",
+                "item": "https://padmapriyahospital.com/specialities"
+              }
+            ]
+          }
+        }}
       />
       
       {/* Header */}

@@ -2,10 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Home, Phone } from 'lucide-react';
 import { hospitalInfo } from '../data/hospitalData';
+import SEOHead from '../components/SEOHead';
 
 export default function NotFound() {
   return (
     <div className="py-20 max-w-xl mx-auto px-4 text-center space-y-6">
+      <SEOHead
+        title="404 - Page Not Found | Sri Padmapriya Hospital"
+        description="The requested page could not be found. Return to Sri Padmapriya Hospital homepage or contact hospital reception."
+        canonicalPath="/404"
+      />
       <div className="w-20 h-20 rounded-full bg-purple-50 text-[#68236B] flex items-center justify-center font-display text-3xl font-extrabold mx-auto shadow-xs border border-purple-100">
         404
       </div>

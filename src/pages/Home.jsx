@@ -16,8 +16,8 @@ export default function Home() {
   return (
     <div className="space-y-12 sm:space-y-16">
       <SEOHead
-        title="Padmapriya Hospital Adyar | Multispeciality Care Chennai"
-        description="Trusted hospital in Indira Nagar, Adyar, Chennai since 2001. Expert consultations in Gynaecology, Surgery, Orthopaedics, Neurology & Diagnostics. Call 044-24420091 or 6381907621."
+        title="Sri Padmapriya Hospital | Multispeciality Hospital in Adyar, Chennai"
+        description="Sri Padmapriya Hospital Pvt. Ltd. is a trusted multispeciality hospital in Indira Nagar, Adyar, Chennai since 2001. Expert consultations in Gynaecology, General Surgery, Orthopaedics, Neurology & Diagnostics. Call 044-24420091 or 6381907621."
         canonicalPath="/"
       />
       

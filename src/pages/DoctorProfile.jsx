@@ -20,36 +20,74 @@ export default function DoctorProfile() {
     return <Navigate to="/doctors" replace />;
   }
 
-  // Physician Schema.org JSON-LD structured data
+  // Clean primary specialty label
+  const primarySpecialty = doctor.speciality ? doctor.speciality.split('|')[0].trim() : 'Specialist';
+
+  // Enhanced Physician Schema.org JSON-LD structured data with BreadcrumbList
   const physicianSchema = {
     "@context": "https://schema.org",
-    "@type": "Physician",
-    "name": doctor.name,
-    "jobTitle": doctor.title,
-    "description": doctor.experienceSummary || `${doctor.title} specializing in ${doctor.speciality} at Sri Padmapriya Hospital Adyar.`,
-    "url": `https://padmapriyahospital.com/doctors/${doctor.slug}`,
-    "image": doctor.photo ? `https://padmapriyahospital.com${doctor.photo}` : undefined,
-    "medicalSpecialty": doctor.speciality,
-    "worksFor": {
-      "@type": "Hospital",
-      "name": "Sri Padmapriya Hospital Pvt. Ltd.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "1st Avenue, Indira Nagar",
-        "addressLocality": "Adyar",
-        "addressRegion": "Tamil Nadu",
-        "postalCode": "600020",
-        "addressCountry": "IN"
+    "@graph": [
+      {
+        "@type": "Physician",
+        "@id": `https://padmapriyahospital.com/doctors/${doctor.slug}#physician`,
+        "name": doctor.name,
+        "jobTitle": doctor.title,
+        "description": doctor.experienceSummary || `Consult ${doctor.name}, ${primarySpecialty} at Sri Padmapriya Hospital, Adyar, Chennai.`,
+        "url": `https://padmapriyahospital.com/doctors/${doctor.slug}`,
+        "image": doctor.photo ? `https://padmapriyahospital.com${doctor.photo}` : "https://padmapriyahospital.com/images/brand/official_hospital_logo.png",
+        "medicalSpecialty": primarySpecialty,
+        "medicalSpecialtyDescription": doctor.speciality,
+        ...(doctor.qualifications && { "alumniOf": doctor.qualifications }),
+        ...(doctor.isRegistrationVerified && doctor.registrationNumber ? { "identifier": doctor.registrationNumber } : {}),
+        "worksFor": {
+          "@type": "Hospital",
+          "@id": "https://padmapriyahospital.com/#hospital",
+          "name": "Sri Padmapriya Hospital Pvt. Ltd.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1st Avenue, Indira Nagar",
+            "addressLocality": "Adyar",
+            "addressRegion": "Tamil Nadu",
+            "postalCode": "600020",
+            "addressCountry": "IN"
+          },
+          "telephone": "+91-44-24420091"
+        }
       },
-      "telephone": "+91-44-24420091"
-    }
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://padmapriyahospital.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Doctors",
+            "item": "https://padmapriyahospital.com/doctors"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": doctor.name,
+            "item": `https://padmapriyahospital.com/doctors/${doctor.slug}`
+          }
+        ]
+      }
+    ]
   };
+
+  const seoTitle = `${doctor.name} – ${primarySpecialty} in Adyar, Chennai | Sri Padmapriya Hospital`;
+  const seoDescription = `Consult ${doctor.name}, ${primarySpecialty} at Sri Padmapriya Hospital, Adyar, Chennai. View qualifications, consultation timings (${doctor.schedule}) and appointment information.`;
 
   return (
     <div className="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
       <SEOHead
-        title={`${doctor.name} - ${doctor.title} | Adyar, Chennai`}
-        description={`Consult ${doctor.name} (${doctor.qualifications}), ${doctor.title} specializing in ${doctor.speciality} at Padmapriya Hospital, Adyar, Chennai. Timings: ${doctor.schedule}.`}
+        title={seoTitle}
+        description={seoDescription}
         canonicalPath={`/doctors/${doctor.slug}`}
         ogImage={doctor.photo || '/images/brand/official_hospital_logo.png'}
         ogType="profile"

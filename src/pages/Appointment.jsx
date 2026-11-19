@@ -15,6 +15,29 @@ export default function Appointment() {
         title="Book Doctor Appointment Online | Padmapriya Hospital Adyar"
         description="Book your specialist doctor consultation at Sri Padmapriya Hospital, Indira Nagar, Adyar, Chennai. Fast online token booking and front desk telephone assistance."
         canonicalPath="/appointment"
+        schemaJson={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Book Doctor Appointment Online | Sri Padmapriya Hospital",
+          "url": "https://padmapriyahospital.com/appointment",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://padmapriyahospital.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Book Appointment",
+                "item": "https://padmapriyahospital.com/appointment"
+              }
+            ]
+          }
+        }}
       />
       
       {/* Header */}

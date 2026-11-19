@@ -1,10 +1,16 @@
 import React from 'react';
 import { AlertCircle, ShieldAlert, FileText, CheckCircle2 } from 'lucide-react';
 import { hospitalInfo } from '../data/hospitalData';
+import SEOHead from '../components/SEOHead';
 
 export default function TermsOfUse() {
   return (
     <div className="py-12 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <SEOHead
+        title="Terms of Use & Medical Disclaimer | Sri Padmapriya Hospital"
+        description="Website terms, medical disclaimer, and enquiry policies for Sri Padmapriya Hospital Pvt. Ltd., Adyar, Chennai."
+        canonicalPath="/terms"
+      />
       
       <div>
         <span className="text-xs font-semibold tracking-wider uppercase text-[#68236B] bg-purple-50 px-2.5 py-1 rounded-md">

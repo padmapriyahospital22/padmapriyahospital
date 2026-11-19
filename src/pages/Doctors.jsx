@@ -47,9 +47,33 @@ export default function Doctors() {
   return (
     <div className="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
       <SEOHead
-        title="Consultant Doctors in Adyar | Specialist OPD Schedules & Booking"
-        description="Consult senior doctors and professors in Adyar, Chennai across 9 specialties at Padmapriya Hospital. Verified OPD schedules, consultation fees, and appointment booking."
+        title="Our Specialist Doctors in Adyar, Chennai | Sri Padmapriya Hospital"
+        description="Meet the specialist doctors at Sri Padmapriya Hospital, Adyar, Chennai. Explore medical specialties, doctor qualifications and appointment information."
         canonicalPath="/doctors"
+        schemaJson={{
+          "@context": "https://schema.org",
+          "@type": "MedicalWebPage",
+          "name": "Specialist Doctors & Medical Team | Sri Padmapriya Hospital",
+          "description": "Meet our panel of 20 verified medical and surgical specialists practicing at Sri Padmapriya Hospital, Adyar, Chennai.",
+          "url": "https://padmapriyahospital.com/doctors",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://padmapriyahospital.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Doctors",
+                "item": "https://padmapriyahospital.com/doctors"
+              }
+            ]
+          }
+        }}
       />
       
       {/* Header */}

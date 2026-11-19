@@ -11,6 +11,29 @@ export default function PatientInfo() {
         title="Patient Care Guidelines & Visitor Info | Padmapriya Hospital Adyar"
         description="Patient guidelines for OPD visits, admission process, visitor hours, and diagnostic protocols at Sri Padmapriya Hospital, Indira Nagar, Adyar, Chennai."
         canonicalPath="/patient-info"
+        schemaJson={{
+          "@context": "https://schema.org",
+          "@type": "MedicalWebPage",
+          "name": "Patient Care Guidelines & Visitor Information | Sri Padmapriya Hospital",
+          "url": "https://padmapriyahospital.com/patient-info",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://padmapriyahospital.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Patient Info",
+                "item": "https://padmapriyahospital.com/patient-info"
+              }
+            ]
+          }
+        }}
       />
       
       {/* Header */}

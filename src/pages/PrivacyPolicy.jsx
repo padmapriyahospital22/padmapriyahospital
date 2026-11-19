@@ -1,10 +1,16 @@
 import React from 'react';
 import { ShieldCheck, Lock, FileText, CheckCircle2 } from 'lucide-react';
 import { hospitalInfo } from '../data/hospitalData';
+import SEOHead from '../components/SEOHead';
 
 export default function PrivacyPolicy() {
   return (
     <div className="py-12 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <SEOHead
+        title="Privacy Policy | Sri Padmapriya Hospital Adyar"
+        description="Patient Privacy Policy and Information Governance at Sri Padmapriya Hospital Pvt. Ltd., Indira Nagar, Adyar, Chennai."
+        canonicalPath="/privacy"
+      />
       
       <div>
         <span className="text-xs font-semibold tracking-wider uppercase text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md">

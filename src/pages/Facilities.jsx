@@ -11,6 +11,30 @@ export default function Facilities() {
         title="Hospital Facilities & Diagnostic Services | Padmapriya Hospital Adyar"
         description="Modern clinical infrastructure at Padmapriya Hospital, Adyar: Operation Theatres, Intensive Care Unit (ICU), Ultrasound, Digital X-Ray, Clinical Pathology, and Inpatient Deluxe Rooms."
         canonicalPath="/facilities"
+        schemaJson={{
+          "@context": "https://schema.org",
+          "@type": "MedicalWebPage",
+          "name": "Hospital Facilities & Diagnostic Infrastructure | Sri Padmapriya Hospital",
+          "description": "Operation Theatres, ICU, Ultrasound, Digital X-Ray, Pathology Lab, and Inpatient Rooms in Adyar, Chennai.",
+          "url": "https://padmapriyahospital.com/facilities",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://padmapriyahospital.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Facilities",
+                "item": "https://padmapriyahospital.com/facilities"
+              }
+            ]
+          }
+        }}
       />
       
       {/* Header */}

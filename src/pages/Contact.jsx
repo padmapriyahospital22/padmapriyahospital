@@ -11,6 +11,29 @@ export default function Contact() {
         title="Contact & Location Directions | Padmapriya Hospital Adyar, Chennai"
         description="Visit Sri Padmapriya Hospital at 1st Avenue, Indira Nagar, Adyar, Chennai - 600020. Phone: 044-24420091, 044-24450878. 24/7 Helpline: 6381907621."
         canonicalPath="/contact"
+        schemaJson={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Contact Sri Padmapriya Hospital",
+          "url": "https://padmapriyahospital.com/contact",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://padmapriyahospital.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Contact",
+                "item": "https://padmapriyahospital.com/contact"
+              }
+            ]
+          }
+        }}
       />
       
       {/* Header */}
