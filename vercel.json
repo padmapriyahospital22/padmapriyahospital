@@ -1,13 +1,43 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/(about|doctors|specialities|facilities|patient-info|appointment|contact|privacy|terms)",
+      "source": "/about",
       "destination": "/index.html"
     },
     {
-      "source": "/doctors/:slug(dr-k-kanmani-ganesh|dr-pavithran|dr-shanmuga-prakash-r|dr-sai-prashanth-pr|dr-m-sivagamasundari|dr-g-rangarajan|dr-s-selva-sankar|dr-hameedullah|dr-s-v-sangeetha|dr-vijayanarasimma-reddy|dr-k-gowthame|prof-dr-g-venkatesan|dr-r-selvaraj|dr-elan-cheralathan|dr-jacinth-chelliah-cornelius|dr-g-gokulakrishnan|dr-udhayadasan-k|dr-sujay-susikar|dr-e-thiyagarajan|dr-ishwarya-muralidharan)",
+      "source": "/doctors",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/doctors/:slug*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/specialities",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/facilities",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/patient-info",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/appointment",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/terms",
       "destination": "/index.html"
     }
   ],
