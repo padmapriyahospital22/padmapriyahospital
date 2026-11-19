@@ -16,7 +16,7 @@ export default function TopBar() {
             <span className="text-[11px] font-bold uppercase tracking-wider text-rose-300">Emergency & Enquiry:</span>
             <a 
               href={`tel:${hospitalInfo.contact.emergencyNumberRaw}`} 
-              onClick={() => trackCallClick(hospitalInfo.contact.emergencyNumberRaw, 'topbar_emergency')}
+              onClick={() => trackCallClick('topbar_emergency')}
               className="font-bold text-white hover:text-rose-200 transition-colors"
             >
               {hospitalInfo.contact.emergencyContact}
@@ -28,7 +28,7 @@ export default function TopBar() {
             <span className="text-xs text-purple-200">Landlines:</span>
             <a 
               href={`tel:${hospitalInfo.contact.primaryLandline.replace(/[^0-9]/g, '')}`} 
-              onClick={() => trackCallClick(hospitalInfo.contact.primaryLandline, 'topbar_primary')}
+              onClick={() => trackCallClick('topbar_primary')}
               className="font-semibold hover:text-white transition-colors"
             >
               {hospitalInfo.contact.primaryLandline}
@@ -36,7 +36,7 @@ export default function TopBar() {
             <span className="text-purple-400">/</span>
             <a 
               href={`tel:${hospitalInfo.contact.secondaryLandline.replace(/[^0-9]/g, '')}`} 
-              onClick={() => trackCallClick(hospitalInfo.contact.secondaryLandline, 'topbar_secondary')}
+              onClick={() => trackCallClick('topbar_secondary')}
               className="font-semibold hover:text-white transition-colors"
             >
               {hospitalInfo.contact.secondaryLandline}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Calendar, Phone, CheckCircle2, AlertCircle, Send, MessageCircle } from 'lucide-react';
 import { doctorsData, hospitalInfo } from '../data/hospitalData';
-import { trackAppointmentSubmit } from '../utils/analytics';
+import { trackAppointmentSubmit, trackWhatsAppClick, trackCallClick } from '../utils/analytics';
 
 export default function AppointmentForm({ defaultDoctor = "" }) {
   const [formData, setFormData] = useState({
@@ -66,7 +66,7 @@ export default function AppointmentForm({ defaultDoctor = "" }) {
       setLoading(false);
       setSubmitted(true);
       try {
-        trackAppointmentSubmit(formData.preferredDoctor || 'General');
+        trackAppointmentSubmit();
         const existing = JSON.parse(localStorage.getItem('sph_enquiries') || '[]');
         existing.push({
           ...formData,
@@ -127,6 +127,7 @@ export default function AppointmentForm({ defaultDoctor = "" }) {
             )}`}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick('appointment_form_success')}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-[#155943] hover:bg-[#0e4030] text-white font-semibold text-xs transition-colors shadow-xs"
           >
             <MessageCircle className="w-3.5 h-3.5" />
@@ -134,6 +135,7 @@ export default function AppointmentForm({ defaultDoctor = "" }) {
           </a>
           <a
             href={`tel:${hospitalInfo.contact.receptionLandline}`}
+            onClick={() => trackCallClick('appointment_form_call')}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-white border border-[#E5E1E7] text-[#24212A] hover:bg-[#FAF9FB] font-semibold text-xs transition-colors"
           >
             <Phone className="w-3.5 h-3.5" />

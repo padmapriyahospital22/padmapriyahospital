@@ -12,7 +12,7 @@ export default function DoctorProfile() {
 
   useEffect(() => {
     if (doctor) {
-      trackDoctorProfileView(doctor.name, doctor.slug, doctor.speciality);
+      trackDoctorProfileView();
     }
   }, [doctor]);
 

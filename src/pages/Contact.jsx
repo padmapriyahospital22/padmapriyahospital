@@ -68,7 +68,7 @@ export default function Contact() {
           <p className="text-xs text-rose-800">Casualty, Enquiries & Consultations</p>
           <a 
             href={`tel:${hospitalInfo.contact.emergencyNumberRaw}`} 
-            onClick={() => trackCallClick(hospitalInfo.contact.emergencyNumberRaw, 'contact_emergency')}
+            onClick={() => trackCallClick('contact_emergency')}
             className="block text-sm font-bold text-rose-700 font-mono hover:underline"
           >
             {hospitalInfo.contact.emergencyContact}
@@ -84,7 +84,7 @@ export default function Contact() {
           <p className="text-xs text-[#69636E]">Reception desk & appointments</p>
           <a 
             href={`tel:${hospitalInfo.contact.primaryLandline.replace(/[^0-9]/g, '')}`} 
-            onClick={() => trackCallClick(hospitalInfo.contact.primaryLandline, 'contact_primary')}
+            onClick={() => trackCallClick('contact_primary')}
             className="block text-sm font-bold text-[#78266F] font-mono hover:underline"
           >
             {hospitalInfo.contact.primaryLandline}
@@ -100,7 +100,7 @@ export default function Contact() {
           <p className="text-xs text-[#69636E]">Direct line & enquiries</p>
           <a 
             href={`tel:${hospitalInfo.contact.secondaryLandline.replace(/[^0-9]/g, '')}`} 
-            onClick={() => trackCallClick(hospitalInfo.contact.secondaryLandline, 'contact_secondary')}
+            onClick={() => trackCallClick('contact_secondary')}
             className="block text-sm font-bold text-[#155943] font-mono hover:underline"
           >
             {hospitalInfo.contact.secondaryLandline}

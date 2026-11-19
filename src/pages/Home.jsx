@@ -6,7 +6,6 @@ import DoctorCard from '../components/DoctorCard';
 import GradientCarousel from '../components/GradientCarousel';
 import { SpecialtyIcon } from '../components/SpecialtyIcon';
 import SEOHead from '../components/SEOHead';
-import { trackCallClick, trackDirectionsClick } from '../utils/analytics';
 
 export default function Home() {
   const [viewMode, setViewMode] = useState('carousel'); // 'carousel' | 'grid'

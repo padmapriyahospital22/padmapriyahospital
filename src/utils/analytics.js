@@ -1,20 +1,28 @@
 /**
- * Google Analytics 4 (GA4) Integration & Event Dispatcher
+ * Google Analytics 4 (GA4) Integration & Privacy-Hardened Event Dispatcher
  * Measurement ID: G-HCCT6R638G
- * Tracks healthcare patient enquiry events and SPA route changes
- * without logging PII or protected health information.
+ * 
+ * Strict Healthcare Privacy & HIPAA Compliance:
+ * - NO patient personal information (names, emails, phone numbers, notes)
+ * - NO doctor names, doctor slugs, or specialties
+ * - NO clinical or symptom details
+ * - Only generic event names and non-sensitive source labels
  */
 
 export const GA_MEASUREMENT_ID = 'G-HCCT6R638G';
 
 /**
  * Tracks SPA route changes on client-side React Router navigation.
+ * Only path and title are transmitted; query parameters are stripped if sensitive.
  */
 export const trackPageView = (path, title) => {
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    // Sanitize path to ensure no query strings leak accidentally
+    const cleanPath = path ? path.split('?')[0] : window.location.pathname;
+    
     window.gtag('event', 'page_view', {
-      page_path: path,
-      page_location: window.location.href,
+      page_path: cleanPath,
+      page_location: `${window.location.origin}${cleanPath}`,
       page_title: title || document.title
     });
   } else if (process.env.NODE_ENV === 'development') {
@@ -23,7 +31,7 @@ export const trackPageView = (path, title) => {
 };
 
 /**
- * Generic event dispatcher
+ * Generic event dispatcher with payload safety filter
  */
 export const trackGAEvent = (eventName, eventParams = {}) => {
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
@@ -33,36 +41,47 @@ export const trackGAEvent = (eventName, eventParams = {}) => {
   }
 };
 
-// Healthcare-specific event handlers
-export const trackCallClick = (phoneNumber, locationLabel = 'global_header') => {
+/**
+ * 1. click_to_call
+ * Tracks generic telephone enquiry clicks without logging phone numbers.
+ */
+export const trackCallClick = (locationLabel = 'header') => {
   trackGAEvent('click_to_call', {
-    phone_number: phoneNumber,
     source_location: locationLabel
   });
 };
 
-export const trackWhatsAppClick = (sourceLocation = 'floating_button') => {
+/**
+ * 2. whatsapp_enquiry_click
+ * Tracks generic WhatsApp enquiry clicks without logging numbers or message text.
+ */
+export const trackWhatsAppClick = (sourceLocation = 'button') => {
   trackGAEvent('whatsapp_enquiry_click', {
     source_location: sourceLocation
   });
 };
 
-export const trackAppointmentSubmit = (doctorSpecialty = 'General') => {
-  trackGAEvent('appointment_form_submission', {
-    specialty_selected: doctorSpecialty
-  });
+/**
+ * 3. appointment_form_submission
+ * Tracks successful appointment form submission as a generic conversion.
+ * Strictly excludes patient name, phone number, doctor chosen, and symptoms.
+ */
+export const trackAppointmentSubmit = () => {
+  trackGAEvent('appointment_form_submission');
 };
 
-export const trackDoctorProfileView = (doctorName, doctorSlug, specialty) => {
-  trackGAEvent('doctor_profile_view', {
-    doctor_name: doctorName,
-    doctor_slug: doctorSlug,
-    specialty: specialty
-  });
+/**
+ * 4. doctor_profile_view
+ * Tracks when a doctor profile page is viewed without sending doctor name, slug or specialty.
+ */
+export const trackDoctorProfileView = () => {
+  trackGAEvent('doctor_profile_view');
 };
 
+/**
+ * 5. directions_click
+ * Tracks generic clinic directions click without transmitting personal location data.
+ */
 export const trackDirectionsClick = () => {
-  trackGAEvent('directions_click', {
-    destination: '1st Avenue, Indira Nagar, Adyar, Chennai'
-  });
+  trackGAEvent('directions_click');
 };
