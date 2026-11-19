@@ -1,44 +1,14 @@
 /**
  * Google Analytics 4 (GA4) Integration & Event Dispatcher
  * Measurement ID: G-HCCT6R638G
- * Safely tracks healthcare patient enquiry events and SPA route changes
+ * Tracks healthcare patient enquiry events and SPA route changes
  * without logging PII or protected health information.
  */
 
 export const GA_MEASUREMENT_ID = 'G-HCCT6R638G';
 
 /**
- * Initializes the GA4 script tag asynchronously once.
- * send_page_view is set to false in config so that page views are
- * explicitly managed by React Router navigation without double counting.
- */
-export const initGA = () => {
-  if (typeof window === 'undefined') return;
-
-  // Prevent duplicate script injection
-  if (document.getElementById('ga-gtag-script')) return;
-
-  const script = document.createElement('script');
-  script.id = 'ga-gtag-script';
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-  document.head.appendChild(script);
-
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function () {
-    window.dataLayer.push(arguments);
-  };
-  window.gtag('js', new Date());
-
-  // Configure GA4 with send_page_view: false to avoid double counting the initial view
-  window.gtag('config', GA_MEASUREMENT_ID, {
-    send_page_view: false,
-    debug_mode: process.env.NODE_ENV === 'development'
-  });
-};
-
-/**
- * Tracks SPA route changes on React Router navigation.
+ * Tracks SPA route changes on client-side React Router navigation.
  */
 export const trackPageView = (path, title) => {
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {

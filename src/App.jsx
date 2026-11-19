@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingAppointmentButton from './components/FloatingAppointmentButton';
-import { initGA, trackPageView } from './utils/analytics';
+import { trackPageView } from './utils/analytics';
 
 // Pages
 import Home from './pages/Home';
@@ -21,13 +21,22 @@ import NotFound from './pages/NotFound';
 
 function RouteTracker() {
   const { pathname, search } = useLocation();
+  const isInitialMount = useRef(true);
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-    // Small timeout ensures document.title has updated via react-helmet-async
+
+    // Initial page load is handled by the synchronous gtag('config') in index.html
+    // On subsequent SPA client navigations, send explicit page_view event
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+
     const timer = setTimeout(() => {
       trackPageView(`${pathname}${search}`, document.title);
-    }, 100);
+    }, 120);
+
     return () => clearTimeout(timer);
   }, [pathname, search]);
 
@@ -35,10 +44,6 @@ function RouteTracker() {
 }
 
 export default function App() {
-  useEffect(() => {
-    initGA();
-  }, []);
-
   return (
     <Router>
       <RouteTracker />
