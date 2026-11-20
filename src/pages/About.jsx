@@ -59,10 +59,13 @@ export default function About() {
           Over 25 Years of Dedicated Community Service
         </h2>
         <p className="text-xs sm:text-sm text-[#69636E] leading-relaxed">
-          Situated at 1st Avenue, Indira Nagar, Adyar, Chennai, Sri Padmapriya Hospital has been a healthcare pillar for more than two and a half decades. Now, under new management, we have renewed our commitment to providing comprehensive, affordable, and advanced medical care.
+          For over 25 years, Padmapriya Hospital has been a trusted name in healthcare, located in the prime heart of Adyar, Chennai. Situated at 1st Avenue, Indira Nagar, we have been serving generations of families with compassion and clinical excellence.
         </p>
         <p className="text-xs sm:text-sm text-[#69636E] leading-relaxed">
-          The hospital is led by <strong className="text-[#24212A]">Dr. Kanmani Ganesh</strong>, Senior Gynaecologist and <strong className="text-[#24212A]">Dr. Gokulakrishnan</strong>, Critical Care Consultant, bringing together expertise in women's health and critical care to serve our community better.
+          Now, under new management, we have renewed our commitment to providing comprehensive, affordable, and advanced medical care.
+        </p>
+        <p className="text-xs sm:text-sm text-[#69636E] leading-relaxed">
+          The hospital is led by <strong className="text-[#24212A]">Dr. Kanmani Ganesh, Senior Gynaecologist</strong> and <strong className="text-[#24212A]">Dr. Gokulakrishnan, Critical Care Consultant</strong>, bringing together expertise in women's health and critical care to serve our community better.
         </p>
       </div>
 
@@ -151,6 +154,45 @@ export default function About() {
           </p>
         </div>
 
+      </div>
+
+      {/* Why Choose Us & Clinical Principles */}
+      <div className="bg-[#FAF9FB] rounded-md border border-[#E5E1E7] p-6 sm:p-8 space-y-4">
+        <span className="text-xs font-bold uppercase tracking-wider text-[#78266F]">
+          Why Choose Us?
+        </span>
+        <h2 className="text-xl font-bold text-[#24212A]">
+          Compassionate Healthcare You Can Trust
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs text-[#24212A]">
+          <div className="flex items-center gap-2">
+            <Check className="w-4 h-4 text-[#155943] shrink-0" />
+            <span>25 Years of Trust | Prime Location at Adyar</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Check className="w-4 h-4 text-[#155943] shrink-0" />
+            <span>Led by Dr. Kanmani Ganesh (Gynaecology) & Dr. Gokulakrishnan (Critical Care)</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Check className="w-4 h-4 text-[#155943] shrink-0" />
+            <span>All Surgeries – Open & Laparoscopy Under One Roof</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Check className="w-4 h-4 text-[#155943] shrink-0" />
+            <span>Complete Maternity, Fertility & Women’s Health Care</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Check className="w-4 h-4 text-[#155943] shrink-0" />
+            <span>Oncologist & Orthopaedic Surgeon Available</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Check className="w-4 h-4 text-[#155943] shrink-0" />
+            <span>Expert Care for General & Critical Patients</span>
+          </div>
+        </div>
+        <p className="text-xs sm:text-sm text-[#69636E] pt-3 border-t border-[#E5E1E7] leading-relaxed">
+          At Padmapriya Hospital, your health is our priority. We blend 25 years of trust with modern medicine to give you and your family the best care, close to home.
+        </p>
       </div>
 
       {/* Clinical Approach & Leadership */}

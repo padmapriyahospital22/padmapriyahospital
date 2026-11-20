@@ -116,7 +116,7 @@ export default function Home() {
               </span>
             </div>
             <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight text-white">
-              Round-the-Clock Emergency Care & Casualty Support
+              Padmapriya Hospital Pvt Ltd
             </h2>
             <p className="text-xs sm:text-sm text-rose-100/90 max-w-2xl leading-relaxed">
               Immediate triage, acute trauma care, surgical emergency coverage, and critical care monitoring under specialist supervision at 1st Avenue, Indira Nagar, Adyar.
@@ -224,7 +224,13 @@ export default function Home() {
               </h2>
 
               <p className="text-xs sm:text-sm text-[#69636E] leading-relaxed">
-                For over 25 years, Padmapriya Hospital has been a trusted name in healthcare, located in the prime heart of Adyar, Chennai at 1st Avenue, Indira Nagar. Now, under new management led by <strong className="text-[#24212A]">Dr. Kanmani Ganesh</strong> (Senior Gynaecologist) and <strong className="text-[#24212A]">Dr. Gokulakrishnan</strong> (Critical Care Consultant), we have renewed our commitment to providing comprehensive, affordable, and advanced medical care.
+                For over 25 years, Padmapriya Hospital has been a trusted name in healthcare, located in the prime heart of Adyar, Chennai. Situated at 1st Avenue, Indira Nagar, we have been serving generations of families with compassion and clinical excellence.
+              </p>
+              <p className="text-xs sm:text-sm text-[#69636E] leading-relaxed">
+                Now, under new management, we have renewed our commitment to providing comprehensive, affordable, and advanced medical care.
+              </p>
+              <p className="text-xs sm:text-sm text-[#69636E] leading-relaxed">
+                The hospital is led by <strong className="text-[#24212A]">Dr. Kanmani Ganesh, Senior Gynaecologist</strong> and <strong className="text-[#24212A]">Dr. Gokulakrishnan, Critical Care Consultant</strong>, bringing together expertise in women's health and critical care to serve our community better.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs text-[#24212A]">
