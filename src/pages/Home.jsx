@@ -236,7 +236,11 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs text-[#24212A]">
                 <div className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-[#155943] shrink-0" />
-                  <span>24/7 Outpatient & Reception Desk</span>
+                  <span>24/7 Emergency / Casualty</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-[#155943] shrink-0" />
+                  <span>24/7 Outpatient & Inpatient</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-[#155943] shrink-0" />

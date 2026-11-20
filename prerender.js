@@ -22,7 +22,7 @@ const pages = [
     title: 'Sri Padmapriya Hospital | Multispeciality Hospital in Adyar, Chennai',
     desc: 'Sri Padmapriya Hospital Pvt. Ltd. is a trusted multispeciality hospital in Indira Nagar, Adyar, Chennai since 2001. Expert consultations in Gynaecology, General Surgery, Orthopaedics, Neurology & Diagnostics. Call 044-24420091 or 6381907621.',
     h1: 'Sri Padmapriya Hospital Adyar, Chennai',
-    bodyText: 'Compassionate Care. Trusted Expertise. Better Health. Specialist Outpatient Consultations, 24/7 Outpatient & Reception Desk, 24/7 Emergency & Casualty Services, Diagnostics and Advanced Surgery in Indira Nagar, Adyar, Chennai.'
+    bodyText: 'Compassionate Care. Trusted Expertise. Better Health. Specialist Outpatient Consultations, 24/7 Emergency / Casualty, 24/7 Outpatient & Inpatient, Diagnostics and Advanced Surgery in Indira Nagar, Adyar, Chennai.'
   },
   {
     path: '/about',
