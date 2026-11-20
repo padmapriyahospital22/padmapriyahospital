@@ -29,7 +29,7 @@ const pages = [
     title: 'About Us | Sri Padmapriya Hospital, Adyar, Chennai',
     desc: 'Established in 2001 in Indira Nagar, Adyar, Chennai, Sri Padmapriya Hospital provides dedicated outpatient specialist consultations, diagnostic services, and focused inpatient clinical care.',
     h1: 'About Sri Padmapriya Hospital',
-    bodyText: 'Established in 2001 in Indira Nagar, Adyar, Sri Padmapriya Hospital provides dedicated patient care, surgical facilities, ICU, and senior consultant clinics.'
+    bodyText: 'For over 25 years, Padmapriya Hospital has been a trusted name in healthcare at 1st Avenue, Indira Nagar, Adyar, Chennai. Now under new management led by Dr. Kanmani Ganesh, Senior Gynaecologist and Dr. Gokulakrishnan, Critical Care Consultant.'
   },
   {
     path: '/doctors',
