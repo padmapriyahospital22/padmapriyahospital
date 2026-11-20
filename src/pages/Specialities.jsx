@@ -59,7 +59,7 @@ export default function Specialities() {
             Dedicated Critical Care & Emergency Unit
           </span>
         </div>
-        <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight text-white">
           24/7 Emergency & Casualty Services
         </h2>
         <p className="text-xs sm:text-sm text-rose-100 leading-relaxed max-w-3xl">

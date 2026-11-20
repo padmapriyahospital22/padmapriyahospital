@@ -115,7 +115,7 @@ export default function Home() {
                 24/7 Emergency & Casualty Services
               </span>
             </div>
-            <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight">
+            <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight text-white">
               Round-the-Clock Emergency Care & Casualty Support
             </h2>
             <p className="text-xs sm:text-sm text-rose-100/90 max-w-2xl leading-relaxed">
