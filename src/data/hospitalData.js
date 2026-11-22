@@ -601,9 +601,9 @@ export const doctorsData = [
     opdFee: "₹800",
     ipVisitFee: "₹1,000",
     isFeeVerified: true,
-    schedule: "11:30 AM – 12:00 PM (Days pending confirmation)",
-    isScheduleVerified: false,
-    availabilityType: "Specific OPD Slot (By Prior Appointment)",
+    schedule: "11:30 AM – 12:00 PM (Please Contact Hospital Reception)",
+    isScheduleVerified: true,
+    availabilityType: "Specific OPD Slot (Please Contact Hospital Reception)",
     experienceSummary: "Super-specialist in neurology and endovascular neurointervention, treating acute stroke, chronic headaches, neurological disorders, and neuromuscular conditions.",
     specialInterests: [
       "Stroke Management & Neurointervention",
