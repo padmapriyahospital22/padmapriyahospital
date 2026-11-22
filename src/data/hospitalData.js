@@ -185,32 +185,6 @@ export const doctorsData = [
     rosterApproved: true,
     verificationNotes: "Chief Consultant. Consultation timing 4:00 PM to 7:00 PM (Monday to Saturday). 24/7 Casualty & emergency surgical coverage."
   },
-  {
-    id: "dr-ganesh",
-    slug: "dr-ganesh",
-    name: "Dr. Ganesh",
-    title: "Specialist Consultant Physician",
-    qualifications: "MBBS, Specialist Qualifications (Awaiting Confirmation)",
-    speciality: "General Medicine & Clinical Consultations",
-    category: "General Medicine",
-    photo: null,
-    cardImage: null,
-    registrationNumber: "Pending Verification",
-    isRegistrationVerified: false,
-    opdFee: "Pending Confirmation",
-    isFeeVerified: false,
-    schedule: "Consultation By Appointment (Timings Awaiting Confirmation)",
-    isScheduleVerified: false,
-    availabilityType: "Specialist OPD (By Appointment)",
-    experienceSummary: "Specialist Consultant Physician at Sri Padmapriya Hospital, Adyar. Detailed professional degrees, clinical history and consultation timings are currently awaiting hospital administrative confirmation.",
-    specialInterests: [
-      "General Clinical Consultations",
-      "Comprehensive Health Checkups",
-      "Preventive Medicine & Adult Healthcare"
-    ],
-    rosterApproved: true,
-    verificationNotes: "Doctor details awaiting administrative confirmation. Retained with verified placeholder content in compliance with hospital accuracy directives."
-  },
   {id: "dr-g-gokulakrishnan",
     slug: "dr-g-gokulakrishnan",
     name: "Dr. G. Gokulakrishnan",

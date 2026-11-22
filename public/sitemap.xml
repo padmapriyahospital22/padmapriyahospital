@@ -180,13 +180,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-    <!-- Dr. Ganesh -->
-    <url>
-        <loc>https://www.padmapriyahospital.com/doctors/dr-ganesh</loc>
-        <lastmod>2026-11-19</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
     <!-- Dr. S. Sathiamoorthy -->
     <url>
         <loc>https://www.padmapriyahospital.com/doctors/dr-s-sathiamoorthy</loc>
