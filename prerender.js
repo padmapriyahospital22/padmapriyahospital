@@ -36,7 +36,7 @@ const pages = [
     title: 'Our Specialist Doctors in Adyar, Chennai | Sri Padmapriya Hospital',
     desc: 'Meet the specialist doctors at Sri Padmapriya Hospital, Adyar, Chennai. Explore medical specialties, doctor qualifications and appointment information.',
     h1: 'Consultant Physicians & Surgeons',
-    bodyText: 'Meet our panel of 20 verified medical and surgical specialists practicing across 9 clinical departments at Sri Padmapriya Hospital, Adyar.'
+    bodyText: 'Meet our panel of 21 verified medical and surgical specialists practicing across clinical departments at Sri Padmapriya Hospital, Adyar.'
   },
   {
     path: '/specialities',

@@ -113,6 +113,7 @@ export const doctorCategories = [
   "Obstetrics & Gynaecology",
   "Medical Gastroenterology",
   "Urology",
+  "Rheumatology",
   "Orthopaedics & Joint Care",
   "General Medicine",
   "Diabetology & General Medicine",
@@ -723,6 +724,39 @@ export const doctorsData = [
     rosterApproved: true,
     verificationNotes: "Consultant Urologist. Consultation by appointment. Details verified from official credentials."
   },
+  {
+    id: "dr-v-krishnamurthy",
+    slug: "dr-v-krishnamurthy",
+    name: "Dr. V. Krishnamurthy",
+    title: "Consultant Rheumatologist",
+    qualifications: "MBBS, MD, DM (Rheumatology)",
+    speciality: "Rheumatology",
+    category: "Rheumatology",
+    photo: "/images/doctors_clean/dr_v_krishnamurthy_white.webp",
+    cardImage: null,
+    registrationNumber: "Pending Verification",
+    isRegistrationVerified: false,
+    opdFee: "Pending Confirmation",
+    isFeeVerified: false,
+    schedule: "Consultation By Appointment",
+    isScheduleVerified: false,
+    availabilityType: "Specialist OPD (By Appointment)",
+    experienceSummary: "Consultant Rheumatologist specializing in the diagnosis, comprehensive evaluation, and medical management of autoimmune disorders, inflammatory joint diseases, and complex rheumatic conditions at Sri Padmapriya Hospital, Adyar.",
+    specialInterests: [
+      "Rheumatoid Arthritis & Inflammatory Arthritis",
+      "Autoimmune Connective Tissue Diseases",
+      "Ankylosing Spondylitis & Spondyloarthritis",
+      "Systemic Lupus Erythematosus (SLE) & Scleroderma",
+      "Gout, Osteoarthritis & Chronic Musculoskeletal Pain"
+    ],
+    qualificationsList: [
+      "MBBS",
+      "MD",
+      "DM (Rheumatology)"
+    ],
+    rosterApproved: true,
+    verificationNotes: "Consultant Rheumatologist. Consultation by appointment. OPD consultation timings and fee pending confirmation."
+  },
     {id: "dr-k-gowthame",
     slug: "dr-k-gowthame",
     name: "Dr. K. Gowthame",
@@ -858,6 +892,13 @@ export const clinicalSpecialties = [
     title: "Neurosurgery & Spine Interventions",
     icon: "Brain",
     description: "Specialized cranial and spinal surgical treatments, minimally invasive spine procedures, head trauma stabilization, and neuro-oncology consultations.",
+    href: "/specialities"
+  },
+  {
+    id: "rheumatology",
+    title: "Rheumatology & Autoimmune Care",
+    icon: "Bone",
+    description: "Specialized evaluation and clinical management of rheumatoid arthritis, autoimmune conditions, connective tissue diseases, and joint pain.",
     href: "/specialities"
   }
 ];

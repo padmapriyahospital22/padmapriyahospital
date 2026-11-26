@@ -54,7 +54,7 @@ export default function Doctors() {
           "@context": "https://schema.org",
           "@type": "MedicalWebPage",
           "name": "Specialist Doctors & Medical Team | Sri Padmapriya Hospital",
-          "description": "Meet our panel of 20 verified medical and surgical specialists practicing at Sri Padmapriya Hospital, Adyar, Chennai.",
+          "description": "Meet our panel of 21 verified medical and surgical specialists practicing at Sri Padmapriya Hospital, Adyar, Chennai.",
           "url": "https://www.padmapriyahospital.com/doctors",
           "breadcrumb": {
             "@type": "BreadcrumbList",
